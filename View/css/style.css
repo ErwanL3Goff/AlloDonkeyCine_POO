@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #333;
+  padding: 10px;
+}
+header nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.films-container,
+.reservations-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.film,
+.reservation {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.footer-links a,
+.social-media a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footer-links a:hover,
+.social-media a:hover {
+  color: #fff;
+}
+
+/* Style du slider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slider h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Affiche le premier slide initialement */
+.slider .slide:first-child {
+  display: block;
+}
+
+/* Style de la grille de films en mosaïque */
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+  gap: 15px;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.film-item {
+  text-align: center;
+}
+
+.film-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.film-item h3 {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.film-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.film-item:hover img {
+  transform: scale(1.05);
+}
+
+.film-detail {
+  text-align: center;
+  padding: 20px;
+}
+
+.film-detail img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.film-detail h1 {
+  font-size: 2em;
+  margin-top: 15px;
+}
+
+.film-detail p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s;
+  position: absolute;
+  left: 94%;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
