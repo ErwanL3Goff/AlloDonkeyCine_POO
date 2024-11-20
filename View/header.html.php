@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bibliothèque : <?php echo $title; ?></title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
