@@ -1,14 +1,20 @@
-<?php
-
-var_dump($_SESSION['user']);
-foreach ($films as $film) {
-    echo "
-<div class='film-item'>
-    <a href='film/show/{$film['id']}'>
-        <img src='view/images/{$film['picture']}' alt='{$film['titre']}'>
-        <h3>{$film['titre']}</h3>
-    </a>
-    <p>{$film['description']}</p>
-    <p><strong>Durée:</strong> {$film['duree']}</p>
-</div>";
-}
+<div class='container'>
+    <h1 class="title">Liste de films</h1>
+    <div class="grid">
+        <?php
+        foreach ($films as $film) {
+            echo "
+        <div class='film-card'>
+            <a href='View/film/show/{$film['id']} class='film-link'>
+                <img src='View/images/{$film['picture']}' alt='{$film['titre']}'class='film-image'>
+                <h3 class='film-title'>{$film['titre']}</h3>
+            <div class='film-details'>
+                </a>
+                <p class='film-description'>{$film['description']}</p>
+                <p class='film-duration'><strong>Durée:</strong> {$film['duree']}</p>
+            </div>
+        </div>";
+        }
+        ?>
+    </div>
+</div>

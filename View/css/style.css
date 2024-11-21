@@ -1,6 +1,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  margin: center;
 }
 header {
   background-color: #333;
@@ -11,19 +12,7 @@ header nav a {
   margin-right: 15px;
   text-decoration: none;
 }
-.films-container,
-.reservations-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.film,
-.reservation {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  text-align: center;
-}
+
 
 footer {
   background-color: #333;
@@ -51,99 +40,8 @@ footer {
   color: #fff;
 }
 
-/* Style du slider */
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  overflow: hidden;
-  border-radius: 10px;
-}
 
-.slide {
-  display: none;
-  position: absolute;
-  width: 100%;
-}
 
-.slide img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.slider h2 {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 1.5em;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Affiche le premier slide initialement */
-.slider .slide:first-child {
-  display: block;
-}
-
-/* Style de la grille de films en mosaïque */
-.films-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-  gap: 15px;
-  padding: 0 20px;
-  margin-top: 20px;
-}
-
-.film-item {
-  text-align: center;
-}
-
-.film-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.film-item h3 {
-  margin-top: 10px;
-  font-size: 1.1em;
-}
-
-.film-item a {
-  color: #333;
-  text-decoration: none;
-}
-
-.film-item:hover img {
-  transform: scale(1.05);
-}
-
-.film-detail {
-  text-align: center;
-  padding: 20px;
-}
-
-.film-detail img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.film-detail h1 {
-  font-size: 2em;
-  margin-top: 15px;
-}
-
-.film-detail p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin: 10px 0;
-}
 
 .logo {
   height: 80px;
@@ -155,4 +53,133 @@ footer {
 
 .logo:hover {
   transform: scale(1.1);
+}
+
+
+
+/* GET READY FOR THE NEXT BATTLE !! */
+
+.card img {
+  object-fit: cover;
+  height: 250px;
+}
+.card h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+/*Attention ça va secouher*/
+
+/* Styles généraux */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Titre principal */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #ff4757;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Grille */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Carte d'un film */
+.film-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du film */
+.film-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Détails du film */
+.film-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.film-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.film-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.film-duration {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff4757;
+}
+
+/* Liens */
+.film-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Zooming*/
+.film-card:hover .film-image {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .film-image {
+      height: 200px;
+  }
+
+  .film-title {
+      font-size: 1.2rem;
+  }
+
+  .film-description, .film-duration {
+      font-size: 0.8rem;
+  }
 }
