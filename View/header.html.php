@@ -23,7 +23,7 @@
         </style>
         <h2 class="Bleach">AlloDokeyCine</h2>
         <nav>
-            <a href="index">Accueil</a>
+            <a href="../../index">Accueil</a>
 
             <?php if (isset($_SESSION['user'])) {
                 echo '<a href="reservation.php">Mes Réservations</a>
