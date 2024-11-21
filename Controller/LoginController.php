@@ -20,8 +20,9 @@ class LoginController
             ]);
 
             if ($user) {
-                header('Location: /home');
-                exit;
+
+                $_SESSION['user'] = $user;
+                Header('Location: /index');
             } else {
                 $error = 'Mauvaise';
             }

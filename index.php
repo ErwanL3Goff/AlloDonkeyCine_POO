@@ -8,11 +8,12 @@ require 'config/controllers.php';
 require 'Router.php';
 ?>
 <style>
-<?php 
-require 'View/css/style.css';?></style>
+    <?php
+    require 'View/css/style.css'; ?>
+</style>
 <?php
 
-
+session_start();
 //MON ROUTER
 
 $router = new Router();

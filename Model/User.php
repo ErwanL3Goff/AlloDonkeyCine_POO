@@ -1,14 +1,15 @@
 <?php
 
-class Utilisateur
+class User
 {
     public int $id;
     public string $nom;
     public string $prenom;
     public string $email;
-    public string $mot_de_passe;
+    public string $password;
     public string $surnom;
-    public string $dateDeNaissance;
+    public ?string $dateDeNaissance = null;
+    public ?string $created_at = null;
 
 
     public function getId()
@@ -50,7 +51,7 @@ class Utilisateur
     }
     public function setPassword($password)
     {
-        $this->mot_de_passe = $password;
+        $this->password = $password;
     }
     public function setSurnom($surnom)
     {
@@ -62,13 +63,8 @@ class Utilisateur
         $this->dateDeNaissance = $dateDeNaissance;
     }
 
-    public function hydrate(array $donnees)
+    public function getCreateTime(): string
     {
-        foreach ($donnees as $key => $value) {
-            $setter = 'set' . ucfirst($key);
-            if (method_exists($this, $setter)) {
-                $this->$setter($value);
-            }
-        }
+        return $this->created_at;
     }
 }

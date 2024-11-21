@@ -26,6 +26,6 @@
             <a href="index">Accueil</a>
             <a href="reservation.php">Mes Réservations</a>
             <a href="account.php">Mon Compte</a>
-            <a href="login.php">Connexion</a>
+            <a href="login">Connexion</a>
         </nav>
     </header>

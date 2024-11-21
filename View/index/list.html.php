@@ -1,6 +1,6 @@
 <?php
 
-
+var_dump($_SESSION['user']);
 foreach ($films as $film) {
     echo "
 <div class='film-item'>

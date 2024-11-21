@@ -14,7 +14,7 @@ class UserController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = $this->userRepository->insert($_POST);
 
-            $confirmation = "L'iutilisateur a bien été ajouté";
+            $confirmation = "L'utilisateur a bien été ajouté";
 
             include BASE_ROOT . 'View/header.html.php';
             include BASE_ROOT . 'View/user/add.html.php';
@@ -22,7 +22,7 @@ class UserController
         } else {
             $title = "Utilisateur";
             $action = 'Ajouter';
-    
+
             include BASE_ROOT . 'View/header.html.php';
             include BASE_ROOT . 'View/user/add.html.php';
             include BASE_ROOT . 'View/footer.html';
