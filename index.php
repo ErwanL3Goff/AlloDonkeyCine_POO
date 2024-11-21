@@ -6,6 +6,12 @@ require 'config/repositories.php';
 require 'config/models.php';
 require 'config/controllers.php';
 require 'Router.php';
+?>
+<style>
+<?php 
+require 'View/css/style.css';?></style>
+<?php
+
 
 //MON ROUTER
 
