@@ -28,4 +28,10 @@ class UserController
             include BASE_ROOT . 'View/footer.html';
         }
     }
+
+    public function logout()
+    {
+        session_destroy();
+        Header('Location: /index');
+    }
 }
