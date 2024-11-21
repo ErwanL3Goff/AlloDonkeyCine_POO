@@ -24,10 +24,10 @@
         <h2 class="Bleach">AlloDokeyCine</h2>
         <nav>
             <a href="index">Accueil</a>
-            <a href="reservation.php">Mes Réservations</a>
-            <a href="account.php">Mon Compte</a>
+
             <?php if (isset($_SESSION['user'])) {
-                echo '<a href="user/logout">Deconnexion</a>';
+                echo '<a href="reservation.php">Mes Réservations</a>
+                <a href="account.php">Mon Compte</a><a href="user/logout">Deconnexion</a>';
             } else {
                 echo '<a href="login">Connexion</a>';
             } ?>

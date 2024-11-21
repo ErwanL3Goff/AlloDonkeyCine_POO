@@ -2,6 +2,6 @@
     <p>
     <h3>Titre: <?= $film['titre'] ?></h3>
     </p>
-    <img src="https://img.freepik.com/vecteurs-libre/vecteur-degrade-logo-colore-oiseau_343694-1365.jpg" />
+    <img src="../../view/images/<?= $film['picture'] ?> " class='film-image' />
     <p>Description: <?= $film['description'] ?></p>
 </div>

@@ -5,8 +5,8 @@
         foreach ($films as $film) {
             echo "
         <div class='film-card'>
-            <a href='View/film/show/{$film['id']} class='film-link'>
-                <img src='View/images/{$film['picture']}' alt='{$film['titre']}'class='film-image'>
+            <a href='film/show/{$film['id']}' class='film-link'>
+                <img src='images/{$film['picture']}' alt='{$film['titre']}'class='film-image'>
                 <h3 class='film-title'>{$film['titre']}</h3>
             <div class='film-details'>
                 </a>
