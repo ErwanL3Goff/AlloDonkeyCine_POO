@@ -19,5 +19,5 @@ $cont = new $controller($dbh);
 
 //J'appele l'action de mon controller
 $action = $elements['action'];
-
-$cont->$action();
+$id = $elements['id'];
+$cont->$action($id);

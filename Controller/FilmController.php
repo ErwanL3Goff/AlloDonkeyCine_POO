@@ -24,4 +24,16 @@ class FilmController
     {
         return "Add Author";
     }
+
+    public function show(int $id)
+    {
+        $id = intval($id);
+        $film = new FilmRepository($this->dbh);
+        $film = $film->getFilm($id);
+        $title = $film['titre'];
+        $action = "Détail";
+        include 'View/header.html.php';
+        include 'View/films/show.html.php';
+        include 'View/footer.html';
+    }
 }

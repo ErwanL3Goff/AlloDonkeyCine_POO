@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Bibliothèque : <?php echo $title; ?></title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -13,9 +15,10 @@
                 <img src="images/Logo.png" alt="Logo du site" class="logo">
             </a>
         </div>
-        <h1><?php echo $title; ?> Controller : <?php echo $action; ?></h1>
+        <h1><?php echo $title; ?></h1>
+        <h2><?php echo $action; ?></h2>
         <style>
-            .Bleach{
+            .Bleach {
                 color: white;
             }
         </style>

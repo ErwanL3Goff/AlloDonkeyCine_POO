@@ -17,4 +17,14 @@ class FilmRepository
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function getFilm(int $id): array // Envois un array de films
+    {
+        $sql = 'SELECT * FROM film where id = :id';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        $stmt->execute();
+        return $stmt->fetch();
+    }
 }
