@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require 'config/constant.php';
 require 'config/db.php';
 require 'config/repositories.php';
@@ -18,7 +18,7 @@ require "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.b
 </style>
 <?php
 
-session_start();
+
 //MON ROUTER
 
 $router = new Router();
