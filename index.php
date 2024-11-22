@@ -4,21 +4,17 @@ require 'config/constant.php';
 require 'config/db.php';
 require 'config/repositories.php';
 require 'config/models.php';
+
 require 'config/controllers.php';
 require 'Router.php';
 
 /*BOOSTRAP'S LINKS
 require "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css";
 require "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js";*/
-
-?>
-<style>
-    <?php
-    require 'View/css/style.css'; ?>
-</style>
-<?php
-
 session_start();
+
+
+
 //MON ROUTER
 
 $router = new Router();

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bibliothèque : <?php echo $title; ?></title>
+    <link rel="stylesheet" type="text/css" href="/View/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -27,7 +28,7 @@
 
             <?php if (isset($_SESSION['user'])) {
                 echo '<a href="/reservation">Mes Réservations</a>
-                <a href="/user">Mon Compte</a><a href="user/logout">Deconnexion</a>';
+                <a href="/user">Mon Compte</a><a href="/user/logout">Deconnexion</a>';
             } else {
                 echo '<a href="/login">Connexion</a>';
             } ?>

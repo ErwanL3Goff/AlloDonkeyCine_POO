@@ -9,7 +9,7 @@ class RegisterController
         $this->userRepository = new UserRepository($dbh);
     }
 
-    public function login()
+    public function register()
     {
         $error = '';
 
@@ -28,11 +28,11 @@ class RegisterController
             }
         }
 
-        $title = "Connexion";
-        $action = 'Login';
+        $title = "Register";
+        $action = 'Nouvel utilisateur';
 
         include BASE_ROOT . 'View/header.html.php';
-        include BASE_ROOT . 'View/login/login.html.php';
+        include BASE_ROOT . 'View/register/register.html.php';
         include BASE_ROOT . 'View/footer.html';
     }
 }

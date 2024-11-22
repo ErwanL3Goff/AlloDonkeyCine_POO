@@ -8,18 +8,24 @@ class Router
         $explodeUri = explode('/', $uri);
 
         //Je récupère mon controller
-        $controller = $explodeUri[1] ? ucfirst($explodeUri[1]) : 'Home';
+        $controller = $explodeUri[1] ? ucfirst($explodeUri[1]) : 'index';
 
         //Je récupère mon action
         $action = $explodeUri[2] ?? 'list';
 
-        if ($controller === 'Home') {
-            $action = 'home';
+        if ($controller === 'index') {
+            $action = 'index';
         }
 
         if ($controller === 'Login') {
             $action = 'login';
         }
+
+        if ($controller === 'Register') {
+            $action = 'register';
+        }
+
+
 
         //Je récupère l'id
         $id = $explodeUri[3] ?? null;

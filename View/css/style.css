@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: center;
@@ -13,7 +12,6 @@ header nav a {
   margin-right: 15px;
   text-decoration: none;
 }
-
 
 footer {
   background-color: #333;
@@ -41,9 +39,6 @@ footer {
   color: #fff;
 }
 
-
-
-
 .logo {
   height: 80px;
   width: auto;
@@ -56,8 +51,6 @@ footer {
   transform: scale(1.1);
 }
 
-
-
 /* GET READY FOR THE NEXT BATTLE !! */
 
 .card img {
@@ -69,13 +62,12 @@ footer {
   font-weight: bold;
 }
 
-
 /*Attention ça va secouher*/
 
 /* Styles généraux */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f4f4f9;
   color: #333;
   line-height: 1.6;
@@ -165,13 +157,7 @@ body {
   transition: transform 0.3s;
 }
 
-
-
-
-
 /*POUR LE LOGIN*/
-
-
 
 /* Conteneur principal */
 .login-container {
@@ -191,7 +177,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid blue;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -222,7 +208,7 @@ body {
 }
 
 .form-group input:focus {
-  background: #fff;
+  background: red;
   box-shadow: 0 0 5px #ff758c;
   border: 1px solid #ff758c;
 }
@@ -231,7 +217,7 @@ body {
 .btn-submit {
   width: 100%;
   padding: 12px 20px;
-  background: #b3001e;
+  background: gray;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -242,15 +228,15 @@ body {
 }
 
 .btn-submit:hover {
-  background: #ff0033;
-  box-shadow: 0 4px 10px rgba(255, 78, 112, 0.5);
+  background: rgb(89, 89, 143);
+  box-shadow: 4px 10px rgba(255, 78, 112, 0.5);
 }
 
 /* Lien d'inscription */
 .register-link {
   margin-top: 20px;
   font-size: 0.9rem;
-  color: #fff;
+  color: red;
 }
 
 .register-link a {
@@ -266,7 +252,7 @@ body {
 
 /* Message d'erreur */
 .error-message {
-  background: rgba(255, 78, 112, 0.8);
+  background: red;
   padding: 10px;
   border-radius: 5px;
   color: #fff;
@@ -284,53 +270,41 @@ body {
   border-radius: 5px;
 }
 
-
 .login-container {
   animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive */
 @media (max-width: 768px) {
   .film-image {
-      height: 200px;
+    height: 200px;
   }
 
   .film-title {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
-  .film-description, .film-duration {
-      font-size: 0.8rem;
+  .film-description,
+  .film-duration {
+    font-size: 0.8rem;
   }
 
   .login-container {
     padding: 20px;
-}
+  }
 
-.login-form h1 {
+  .login-form h1 {
     font-size: 1.5rem;
-}
+  }
 }

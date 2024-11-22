@@ -16,7 +16,7 @@ if (empty($_SESSION['user'])) {
                 </label>
             </div>
             <div class='form-group'>
-                <input type="text" name="email" id="email"  placeholder="Entrez votre adresse numérique" required />
+                <input type="text" name="email" id="email" placeholder="Entrez votre adresse numérique" required />
                 <label for="password">
                     Mot de passe
                 </label>
@@ -30,6 +30,7 @@ if (empty($_SESSION['user'])) {
         </p>
         </form>
     </div>
+
 <?php
 } else {
     echo "Vous êtes déjà connecté";
