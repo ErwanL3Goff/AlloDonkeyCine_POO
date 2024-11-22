@@ -191,7 +191,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000000;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -206,13 +206,13 @@ body {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: solid;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.8);
   color: #333;
@@ -231,7 +231,7 @@ body {
 .btn-submit {
   width: 100%;
   padding: 12px 20px;
-  background: #ff758c;
+  background: #b3001e;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -242,7 +242,7 @@ body {
 }
 
 .btn-submit:hover {
-  background: #ff4e70;
+  background: #ff0033;
   box-shadow: 0 4px 10px rgba(255, 78, 112, 0.5);
 }
 
@@ -254,14 +254,14 @@ body {
 }
 
 .register-link a {
-  color: #ffdfdf;
+  color: red;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .register-link a:hover {
-  color: #ffb3b3;
+  color: blue;
 }
 
 /* Message d'erreur */
