@@ -18,12 +18,20 @@ class UserRepository
         return $stmt->fetchObject(User::class);
     }
 
-    public function addUser(array $infos): bool
+    public function addUser(array $newUser)
     {
-        $sql = 'SELECT * FROM utilisateur WHERE email = \'' . $infos['email'] . '\' AND password = \'' . $infos['password'] . '\'';
+        $sql = "insert into utilisateur (nom, prenom, email,password,surnom,dateDeNaissance,created_at) 
+        values (:nom, :prenom, :email, :password, :surnom, :dateDeNaissance, :created_at)";
         $stmt = $this->dbh->prepare($sql);
+        $stmt->bindParam(':nom', $newUser['nom']);
+        $stmt->bindParam(':prenom', $newUser['prenom']);
+        $stmt->bindParam(':email', $newUser['email']);
+        $stmt->bindParam(':password', $newUser['password']);
+        $stmt->bindParam(':surnom', $newUser['surnom']);
+        $stmt->bindParam(':dateDeNaissance', $newUser['dateDeNaissance']);
+        $stmt->bindParam(':created_at', $newUser['created_at']);
 
         $stmt->execute();
-        return $stmt->fetchObject(User::class);
+        return $stmt;
     }
 }

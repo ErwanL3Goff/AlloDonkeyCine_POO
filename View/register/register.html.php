@@ -1,14 +1,19 @@
 <form method="post">
-    <label for="lastname">
-        SU
+    <label for="lastName">
+        Nom de famille
     </label>
-    <input type="text" name="lastname" id="lastname" />
+    <input type="text" name="lastName" id="lastName" />
     <br />
 
-    <label for="firstname">
-        Steven
+    <label for="firstName">
+        Prenom
     </label>
-    <input type="text" name="firstname" id="firstname" />
+    <input type="text" name="firstName" id="firstName" />
+    <br />
+    <label for="nickname">
+        Pseudo
+    </label>
+    <input type="text" name="nickname" id="nickname" />
     <br />
 
     <label for="email">
@@ -21,6 +26,12 @@
         Mot de passe
     </label>
     <input type="password" name="password" id="password" />
+    <br />
+
+    <label for="dateOfBirth">
+        Mot de passe
+    </label>
+    <input type="date" name="dateOfBirth" id="dateOfBirth" />
     <br />
 
     <br /><br />

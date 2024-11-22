@@ -9,20 +9,35 @@ class RegisterController
         $this->userRepository = new UserRepository($dbh);
     }
 
+    public function checkForm($postUser)
+    {
+        if (!empty($postUser))
+            $newUser['firstName'] = htmlspecialchars($postUser['firstName']);
+        $newUser['lastName'] = htmlspecialchars($postUser['lastName']);
+        $newUser['email'] = filter_var($postUser['email'], FILTER_SANITIZE_EMAIL);
+        $newUser['password'] = $postUser['password'];
+        return $newUser;
+    }
+
+
     public function register()
     {
         $error = '';
+        if ($_POST) {
+            if ($this->checkForm($_POST)) {
+                $newUser = $this->userRepository->addUser([
+                    'nom' => $_POST['lastName'],
+                    'prenom' => $_POST['firstName'],
+                    'surnom' => $_POST['nickname'],
+                    'dateDeNaissance' => $_POST['dateOfBirth'],
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'email' => $_POST['email'],
+                    'password' => $_POST['password']
+                ]);
+            }
+            if ($newUser) {
 
-        if (!empty($_POST['email']) && !empty($_POST['password'])) {
-            $user = $this->userRepository->getUserByEmailAndPassword([
-                'email' => $_POST['email'],
-                'password' => $_POST['password']
-            ]);
-
-            if ($user) {
-
-                $_SESSION['user'] = $user;
-                Header('Location: /index');
+                echo "Utilisateur ajouté";
             } else {
                 $error = 'Mauvaise';
             }
