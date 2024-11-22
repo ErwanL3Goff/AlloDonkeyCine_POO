@@ -25,6 +25,11 @@ class Router
             $action = 'register';
         }
 
+        if ($controller === 'User') {
+            $action = 'user';
+        }
+
+
 
 
         //Je récupère l'id

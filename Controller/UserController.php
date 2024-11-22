@@ -34,4 +34,19 @@ class UserController
         session_destroy();
         Header('Location: /index');
     }
+
+
+
+    public function user()
+    {
+        $title ='Espace utilisateur';
+        $action ='Bienvenu';
+        include BASE_ROOT . 'View/header.html.php';
+        include BASE_ROOT . 'View/user/utilisateur.html.php';
+        include BASE_ROOT . 'View/footer.html';
+    }
+
+
+
 }
+
