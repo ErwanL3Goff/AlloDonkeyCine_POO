@@ -3,10 +3,10 @@
 class Reservation
 {
     public int $id;
-    public Utilisateur $user;
+    public User $user;
     public Seance $seance;
 
-    function newReservation(Utilisateur $user, Seance $seance)
+    function newReservation(User $user, Seance $seance)
     {
         $this->user = $user;
         $this->seance = $seance;
