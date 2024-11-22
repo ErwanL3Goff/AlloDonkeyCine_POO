@@ -11,7 +11,7 @@ if (!empty($_SESSION['user'])) {
     <!-- Section 1 : Informations utilisateur -->
     <section class="user-info">
         <div class="profile">
-            <img src="profile.jpg" alt="Photo de profil de l'utilisateur" class='profile-pic'>
+            <img src="../View/images/Profil_pic/Default.jpg" alt="Photo de profil de l'utilisateur" class='profile-pic'>
             <h1>Nom : <span>Staline</span></h1>
             <h2>Prénom : <span>Joseph</span></h2>
         </div>
