@@ -18,10 +18,12 @@ class UserRepository
         return $stmt->fetchObject(User::class);
     }
 
-    public function insert(array $infos): bool
+    public function addUser(array $infos): bool
     {
-        $SQL = "insert into user SET username ...";
+        $sql = 'SELECT * FROM utilisateur WHERE email = \'' . $infos['email'] . '\' AND password = \'' . $infos['password'] . '\'';
+        $stmt = $this->dbh->prepare($sql);
 
-        return false;
+        $stmt->execute();
+        return $stmt->fetchObject(User::class);
     }
 }
