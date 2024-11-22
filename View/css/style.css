@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: center;
 }
+
 header {
   background-color: #333;
   padding: 10px;
@@ -168,6 +169,148 @@ body {
 
 
 
+/*POUR LE LOGIN*/
+
+
+
+/* Conteneur principal */
+.login-container {
+  background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Titre du formulaire */
+.login-form h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Groupes de formulaire */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  background: #fff;
+  box-shadow: 0 0 5px #ff758c;
+  border: 1px solid #ff758c;
+}
+
+/* Bouton de connexion */
+.btn-submit {
+  width: 100%;
+  padding: 12px 20px;
+  background: #ff758c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: #ff4e70;
+  box-shadow: 0 4px 10px rgba(255, 78, 112, 0.5);
+}
+
+/* Lien d'inscription */
+.register-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.register-link a {
+  color: #ffdfdf;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.register-link a:hover {
+  color: #ffb3b3;
+}
+
+/* Message d'erreur */
+.error-message {
+  background: rgba(255, 78, 112, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Message de connexion déjà actif */
+.logged-message {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+.login-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -182,4 +325,12 @@ body {
   .film-description, .film-duration {
       font-size: 0.8rem;
   }
+
+  .login-container {
+    padding: 20px;
+}
+
+.login-form h1 {
+    font-size: 1.5rem;
+}
 }
