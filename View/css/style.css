@@ -177,7 +177,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid blue;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -192,13 +192,13 @@ body {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: solid;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.8);
   color: #333;
@@ -208,7 +208,7 @@ body {
 }
 
 .form-group input:focus {
-  background: #fff;
+  background: red;
   box-shadow: 0 0 5px #ff758c;
   border: 1px solid #ff758c;
 }
@@ -217,7 +217,7 @@ body {
 .btn-submit {
   width: 100%;
   padding: 12px 20px;
-  background: #ff758c;
+  background: gray;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -228,31 +228,31 @@ body {
 }
 
 .btn-submit:hover {
-  background: #ff4e70;
-  box-shadow: 0 4px 10px rgba(255, 78, 112, 0.5);
+  background: rgb(89, 89, 143);
+  box-shadow: 4px 10px rgba(255, 78, 112, 0.5);
 }
 
 /* Lien d'inscription */
 .register-link {
   margin-top: 20px;
   font-size: 0.9rem;
-  color: #fff;
+  color: red;
 }
 
 .register-link a {
-  color: #ffdfdf;
+  color: red;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .register-link a:hover {
-  color: #ffb3b3;
+  color: blue;
 }
 
 /* Message d'erreur */
 .error-message {
-  background: rgba(255, 78, 112, 0.8);
+  background: red;
   padding: 10px;
   border-radius: 5px;
   color: #fff;
