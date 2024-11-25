@@ -24,11 +24,11 @@ if (!empty($_SESSION['user'])) {
             <form method="post" class="options-form">
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="<?= $userLastname ?>">
+                    <input type="text" id="nom" name="nom" disabled placeholder="<?= $userLastname ?>">
                 </div>
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="<?= $userFirstname ?>">
+                    <input type="text" id="prenom" name="prenom" disabled placeholder="<?= $userFirstname ?>">
                 </div>
                 <div class="form-group">
                     <label for="newPassword">Nouveau mot de passe</label>
@@ -36,9 +36,9 @@ if (!empty($_SESSION['user'])) {
                 </div>
                 <div class="form-group">
                     <label for="oldPassword">Ancien mot de passe</label>
-                    <input type="password" id="password" name="oldpassword" placeholder="Insérez votre ancien mot de passe afin de pouvoir le modifier">
+                    <input type="password" id="password" name="oldPassword" placeholder="Insérez votre ancien mot de passe afin de pouvoir le modifier">
                 </div>
-                <button type="submit" class="btn">Mettre à jour</button>
+                <button type="submit" class="btn">Changer le mot de passe</button>
             </form>
             <a href="/user/logout" class="logout-link">Déconnexion</a>
         </section>

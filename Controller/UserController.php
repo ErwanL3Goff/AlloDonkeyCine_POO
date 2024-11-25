@@ -16,9 +16,25 @@ class UserController
         Header('Location: /index');
     }
 
+    public function updatePassword($postUser)
+    {
+        if (!empty($postUser)) {
+            if ($postUser['oldPassword'] == $_SESSION['user']->password) {
+                $this->userRepository->updatePassword(['password' => $postUser['newPassword'], 'id' => $_SESSION['user']->id]);
+            }
+        }
+    }
 
     public function infos()
     {
+        if ($_POST) {
+            $updateUser = $this->updatePassword($_POST);
+            if ($updateUser) {
+                echo "Modification effectuée";
+            } else {
+                $error = 'Changement non effectué';
+            }
+        }
         $title = 'Espace utilisateur';
         $action = 'Bienvenu';
         $userFirstname = $_SESSION['user']->prenom;
