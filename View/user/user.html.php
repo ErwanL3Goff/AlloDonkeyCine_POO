@@ -21,18 +21,22 @@ if (!empty($_SESSION['user'])) {
         <!-- Section 2 : Options utilisateur -->
         <section class="user-options">
             <h2>Options</h2>
-            <form method="post" action="update_user.php" class="options-form">
+            <form method="post" class="options-form">
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Modifier le nom">
+                    <input type="text" id="nom" name="nom" placeholder="<?= $userLastname ?>">
                 </div>
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="Modifier le prénom">
+                    <input type="text" id="prenom" name="prenom" placeholder="<?= $userFirstname ?>">
                 </div>
                 <div class="form-group">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="password" placeholder="Modifier le mot de passe">
+                    <label for="newPassword">Nouveau mot de passe</label>
+                    <input type="password" id="password" name="newPassword" placeholder="Modifier le mot de passe">
+                </div>
+                <div class="form-group">
+                    <label for="oldPassword">Ancien mot de passe</label>
+                    <input type="password" id="password" name="oldpassword" placeholder="Insérez votre ancien mot de passe afin de pouvoir le modifier">
                 </div>
                 <button type="submit" class="btn">Mettre à jour</button>
             </form>
