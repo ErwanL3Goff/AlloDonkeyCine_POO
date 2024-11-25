@@ -11,8 +11,8 @@
 <body>
     <header>
         <div class="logo-container">
-            <a href="index">
-                <img src="View/images/Logo.png" alt="Logo du site" class="logo">
+            <a href="/index">
+                <img src="/View/images/Logo.png" alt="Logo du site" class="logo">
             </a>
         </div>
         <h1><?php echo $title; ?></h1>
@@ -28,7 +28,7 @@
 
             <?php if (isset($_SESSION['user'])) {
                 echo '<a href="/reservation">Mes Réservations</a>
-                <a href="/user">Mon Compte</a><a href="/user/logout">Deconnexion</a>';
+                <a href="/user/infos">Mon Compte</a><a href="/user/logout">Deconnexion</a>';
             } else {
                 echo '<a href="/login">Connexion</a>';
             } ?>

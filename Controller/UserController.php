@@ -9,25 +9,6 @@ class UserController
         $this->userRepository = new UserRepository($dbh);
     }
 
-    public function add()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $user = $this->userRepository->insert($_POST);
-
-            $confirmation = "L'utilisateur a bien été ajouté";
-
-            include BASE_ROOT . 'View/header.html.php';
-            include BASE_ROOT . 'View/user/add.html.php';
-            include BASE_ROOT . 'View/footer.html';
-        } else {
-            $title = "Utilisateur";
-            $action = 'Ajouter';
-
-            include BASE_ROOT . 'View/header.html.php';
-            include BASE_ROOT . 'View/user/add.html.php';
-            include BASE_ROOT . 'View/footer.html';
-        }
-    }
 
     public function logout()
     {
@@ -36,17 +17,14 @@ class UserController
     }
 
 
-
-    public function user()
+    public function infos()
     {
-        $title ='Espace utilisateur';
-        $action ='Bienvenu';
+        $title = 'Espace utilisateur';
+        $action = 'Bienvenu';
+        $userFirstname = $_SESSION['user']->prenom;
+        $userLastname = $_SESSION['user']->nom;
         include BASE_ROOT . 'View/header.html.php';
-        include BASE_ROOT . 'View/user/utilisateur.html.php';
+        include BASE_ROOT . 'View/user/user.html.php';
         include BASE_ROOT . 'View/footer.html';
     }
-
-
-
 }
-
