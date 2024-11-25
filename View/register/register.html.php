@@ -42,3 +42,6 @@
         <br /><br />
         <input type="submit" value="Inscription" />
     </form>
+    <br /><br />
+    <input type="submit" value="Inscription" />
+    </form>

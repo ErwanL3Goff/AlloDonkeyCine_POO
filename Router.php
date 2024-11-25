@@ -14,7 +14,7 @@ class Router
         $action = $explodeUri[2] ?? 'list';
 
         if ($controller === 'index') {
-            $action = 'index';
+            $action = 'list';
         }
 
         if ($controller === 'Login') {
@@ -25,9 +25,6 @@ class Router
             $action = 'register';
         }
 
-        if ($controller === 'User') {
-            $action = 'user';
-        }
 
 
 
