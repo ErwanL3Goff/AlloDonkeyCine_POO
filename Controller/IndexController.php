@@ -11,8 +11,6 @@ class IndexController
 
     public function list()
     {
-
-
         $title = 'Index';
         $action = '';
         $films = new IndexRepository($this->dbh);

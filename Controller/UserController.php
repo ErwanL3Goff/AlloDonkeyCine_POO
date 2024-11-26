@@ -9,25 +9,6 @@ class UserController
         $this->userRepository = new UserRepository($dbh);
     }
 
-    public function add()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $user = $this->userRepository->insert($_POST);
-
-            $confirmation = "L'utilisateur a bien été ajouté";
-
-            include BASE_ROOT . 'View/header.html.php';
-            include BASE_ROOT . 'View/user/add.html.php';
-            include BASE_ROOT . 'View/footer.html';
-        } else {
-            $title = "Utilisateur";
-            $action = 'Ajouter';
-
-            include BASE_ROOT . 'View/header.html.php';
-            include BASE_ROOT . 'View/user/add.html.php';
-            include BASE_ROOT . 'View/footer.html';
-        }
-    }
 
     public function logout()
     {
@@ -35,18 +16,31 @@ class UserController
         Header('Location: /index');
     }
 
-
-
-    public function user()
+    public function updatePassword($postUser)
     {
-        $title ='Espace utilisateur';
-        $action ='Bienvenu';
-        include BASE_ROOT . 'View/header.html.php';
-        include BASE_ROOT . 'View/user/utilisateur.html.php';
-        include BASE_ROOT . 'View/footer.html';
+        if (!empty($postUser)) {
+            if ($postUser['oldPassword'] == $_SESSION['user']->password) {
+                $this->userRepository->updatePassword(['password' => $postUser['newPassword'], 'id' => $_SESSION['user']->id]);
+            }
+        }
     }
 
-
-
+    public function infos()
+    {
+        if ($_POST) {
+            $updateUser = $this->updatePassword($_POST);
+            if ($updateUser) {
+                echo "Modification effectuée";
+            } else {
+                $error = 'Changement non effectué';
+            }
+        }
+        $title = 'Espace utilisateur';
+        $action = 'Bienvenu';
+        $userFirstname = $_SESSION['user']->prenom;
+        $userLastname = $_SESSION['user']->nom;
+        include BASE_ROOT . 'View/header.html.php';
+        include BASE_ROOT . 'View/user/user.html.php';
+        include BASE_ROOT . 'View/footer.html';
+    }
 }
-
