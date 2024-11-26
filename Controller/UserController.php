@@ -19,20 +19,26 @@ class UserController
     public function updatePassword($postUser)
     {
         if (!empty($postUser)) {
-            if ($postUser['oldPassword'] == $_SESSION['user']->password) {
-                $this->userRepository->updatePassword(['password' => $postUser['newPassword'], 'id' => $_SESSION['user']->id]);
+            if ($postUser['confirmNewPassword'] == $postUser['newPassword']) {
+                $checkPassword = $this->userRepository->getUserPasswordById($_SESSION['user']->id);
+                if ($postUser['oldPassword'] == $checkPassword["password"]) {
+                    $checkPassword = $this->userRepository->getUserPasswordById($_SESSION['user']->id);
+                    $result = $this->userRepository->updatePassword(['password' => $postUser['newPassword'], 'id' => $_SESSION['user']->id]);
+                    return true;
+                }
             }
-        }
+        } else return false;
     }
 
     public function infos()
     {
         if ($_POST) {
             $updateUser = $this->updatePassword($_POST);
-            if ($updateUser) {
+            var_dump($updateUser);
+            if ($updateUser == true) {
                 echo "Modification effectuée";
             } else {
-                $error = 'Changement non effectué';
+                echo "Erreur lors de la modification";
             }
         }
         $title = 'Espace utilisateur';

@@ -35,6 +35,14 @@ class UserRepository
         return $stmt;
     }
 
+    public function getUserPasswordById($id)
+    {
+        $sql = 'SELECT password FROM utilisateur WHERE id = \'' . $id . '\'';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public function updatePassword($updatePassword)
     {
         $sql = "UPDATE utilisateur SET password = :password  WHERE id = :id";
@@ -42,6 +50,5 @@ class UserRepository
         $stmt->bindParam(':password', $updatePassword['password']);
         $stmt->bindParam(':id', $updatePassword['id']);
         $stmt->execute();
-        return $stmt;
     }
 }
