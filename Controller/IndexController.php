@@ -13,7 +13,9 @@ class IndexController
     {
         $title = 'Index';
         $action = '';
-        $films = new IndexRepository($this->dbh);
+        $currentFilms = new FilmRepository($this->dbh);
+        $currentFilms = $currentFilms->getCurrentFilms();
+        $films = new FilmRepository($this->dbh);
         $films = $films->getFilmList();
         require 'View/header.html.php';
         require 'View/index/list.html.php';

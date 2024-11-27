@@ -9,11 +9,20 @@ class SeanceRepository
         $this->dbh = $dbh;
     }
 
-    public function getSeanceForReservation()
+    // public function getSeanceForReservation()
+    // {
+    //     $query = $this->dbh->prepare("SELECT * FROM seance WHERE id = :id");
+    //     $query->execute(['id' => $_GET['id']]);
+    //     $seance = $query->fetch();
+    //     return $seance;
+    // }
+
+    public function getFilmSeance($idMovie): array
     {
-        $query = $this->dbh->prepare("SELECT * FROM seance WHERE id = :id");
-        $query->execute(['id' => $_GET['id']]);
-        $seance = $query->fetch();
-        return $seance;
+        $sql = "SELECT * FROM seance where id_film = :id order by seance.date, seance.heureDebut";
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->bindParam(':id', $idMovie);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 }

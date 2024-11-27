@@ -27,4 +27,21 @@ class FilmRepository
         $stmt->execute();
         return $stmt->fetch();
     }
+
+    public function getCurrentFilms(): array
+    {
+        $sql = 'SELECT 
+    f.id AS film_id,
+    f.titre AS film_titre,
+    f.duree AS film_duree,
+    f.description AS film_description,
+    f.picture AS film_picture,
+    MIN(s.date) AS premiere_seance
+FROM film f
+INNER JOIN seance s ON f.id = s.id_film
+GROUP BY f.id, f.titre, f.duree, f.description, f.picture';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
