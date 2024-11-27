@@ -1,4 +1,4 @@
-<div>
+<div class="Pablo">
     <p>
     <h3>Titre: <?= $film['titre'] ?></h3>
     </p>
