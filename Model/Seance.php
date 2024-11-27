@@ -5,13 +5,16 @@ class Seance
     public film $film;
     public salle $salle;
     public string $heureDebut;
+    public string $date;
 
 
-    function newSeance(film $film, salle $salle, string $heureDebut)
+    function newSeance(int $id, film $film, salle $salle, string $heureDebut)
     {
+        $this->id = $id;
         $this->film = $film;
         $this->salle = $salle;
         $this->heureDebut = $heureDebut;
+        $this->date = date('Y-m-d');
     }
 
     public function getId()

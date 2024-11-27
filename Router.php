@@ -13,9 +13,6 @@ class Router
         //Je récupère mon action
         $action = $explodeUri[2] ?? 'list';
 
-        if ($controller === 'index') {
-            $action = 'list';
-        }
 
         if ($controller === 'Login') {
             $action = 'login';
