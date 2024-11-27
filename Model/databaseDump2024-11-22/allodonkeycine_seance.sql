@@ -27,14 +27,14 @@ CREATE TABLE `seance` (
   `id_film` int DEFAULT NULL,
   `id_salle` int DEFAULT NULL,
   `heureDebut` time DEFAULT NULL,
-  `heureFin` time DEFAULT NULL,
+  `date` date DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `seanceFilm_idx` (`id_film`),
   KEY `seanceSalle_idx` (`id_salle`),
   CONSTRAINT `seanceFilm` FOREIGN KEY (`id_film`) REFERENCES `film` (`id`),
   CONSTRAINT `seanceSalle` FOREIGN KEY (`id_salle`) REFERENCES `salle` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +43,7 @@ CREATE TABLE `seance` (
 
 LOCK TABLES `seance` WRITE;
 /*!40000 ALTER TABLE `seance` DISABLE KEYS */;
+INSERT INTO `seance` VALUES (1,4,1,'14:00:00','2024-11-01',NULL),(2,5,1,'10:00:00','2024-11-01',NULL);
 /*!40000 ALTER TABLE `seance` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-22  9:54:58
+-- Dump completed on 2024-11-27  9:26:37

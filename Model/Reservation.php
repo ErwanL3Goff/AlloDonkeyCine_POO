@@ -24,4 +24,14 @@ class Reservation
     {
         return $this->seance;
     }
+
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+    }
+
+    public function setSeance(Seance $seance)
+    {
+        $this->seance = $seance;
+    }
 }

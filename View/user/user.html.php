@@ -35,6 +35,10 @@ if (!empty($_SESSION['user'])) {
                     <input type="password" id="password" name="newPassword" placeholder="Modifier le mot de passe">
                 </div>
                 <div class="form-group">
+                    <label for="confirmNewPassword">Confirmer le nouveau mot de passe</label>
+                    <input type="password" id="password" name="confirmNewPassword" placeholder="Confirmer le nouveau mot de passe">
+                </div>
+                <div class="form-group">
                     <label for="oldPassword">Ancien mot de passe</label>
                     <input type="password" id="password" name="oldPassword" placeholder="Insérez votre ancien mot de passe afin de pouvoir le modifier">
                 </div>
