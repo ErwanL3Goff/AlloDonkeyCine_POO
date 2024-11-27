@@ -412,6 +412,17 @@ body {
 
 /*PAGE DE RESERVATION*/
 
+.Pablo{
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
 .film-container2 {
   background-color: #fff;
   border-radius: 8px;
