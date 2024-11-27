@@ -16,33 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `reservation`
+-- Table structure for table `seance`
 --
 
-DROP TABLE IF EXISTS `reservation`;
+DROP TABLE IF EXISTS `seance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `reservation` (
+CREATE TABLE `seance` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `ID_user` int NOT NULL,
-  `ID_seance` int NOT NULL,
+  `id_film` int DEFAULT NULL,
+  `id_salle` int DEFAULT NULL,
+  `heureDebut` time DEFAULT NULL,
+  `date` date DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `reservationIDuser_idx` (`ID_user`),
-  KEY `reversationSeance_idx` (`ID_seance`),
-  CONSTRAINT `reservationIDuser` FOREIGN KEY (`ID_user`) REFERENCES `utilisateur` (`id`),
-  CONSTRAINT `reversationSeance` FOREIGN KEY (`ID_seance`) REFERENCES `seance` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `seanceFilm_idx` (`id_film`),
+  KEY `seanceSalle_idx` (`id_salle`),
+  CONSTRAINT `seanceFilm` FOREIGN KEY (`id_film`) REFERENCES `film` (`id`),
+  CONSTRAINT `seanceSalle` FOREIGN KEY (`id_salle`) REFERENCES `salle` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `reservation`
+-- Dumping data for table `seance`
 --
 
-LOCK TABLES `reservation` WRITE;
-/*!40000 ALTER TABLE `reservation` DISABLE KEYS */;
-INSERT INTO `reservation` VALUES (1,1,1,NULL),(2,1,2,NULL);
-/*!40000 ALTER TABLE `reservation` ENABLE KEYS */;
+LOCK TABLES `seance` WRITE;
+/*!40000 ALTER TABLE `seance` DISABLE KEYS */;
+INSERT INTO `seance` VALUES (1,4,1,'14:00:00','2024-11-27',NULL),(2,5,1,'10:00:00','2024-11-01',NULL),(3,4,1,'19:00:00','2024-11-27',NULL),(4,4,1,'07:00:00','2024-11-27',NULL);
+/*!40000 ALTER TABLE `seance` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-27  9:26:37
+-- Dump completed on 2024-11-27 21:19:28

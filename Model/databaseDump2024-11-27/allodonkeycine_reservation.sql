@@ -16,34 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `utilisateur`
+-- Table structure for table `reservation`
 --
 
-DROP TABLE IF EXISTS `utilisateur`;
+DROP TABLE IF EXISTS `reservation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `utilisateur` (
+CREATE TABLE `reservation` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) NOT NULL,
-  `prenom` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `surnom` varchar(45) NOT NULL,
-  `dateDeNaissance` date DEFAULT NULL,
+  `ID_user` int NOT NULL,
+  `ID_seance` int NOT NULL,
   `created_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`,`email`,`surnom`),
-  UNIQUE KEY `surnom_UNIQUE` (`surnom`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id`),
+  KEY `reservationIDuser_idx` (`ID_user`),
+  KEY `reversationSeance_idx` (`ID_seance`),
+  CONSTRAINT `reservationIDuser` FOREIGN KEY (`ID_user`) REFERENCES `utilisateur` (`id`),
+  CONSTRAINT `reversationSeance` FOREIGN KEY (`ID_seance`) REFERENCES `seance` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `utilisateur`
+-- Dumping data for table `reservation`
 --
 
-LOCK TABLES `utilisateur` WRITE;
-/*!40000 ALTER TABLE `utilisateur` DISABLE KEYS */;
-INSERT INTO `utilisateur` VALUES (1,'SU','Steven','stevensu@email.com','motdepasse','administrateur',NULL,NULL),(5,'azer','azertyuiop','azerty@azerty.aze','azerty','razer','2020-01-01','2024-11-22 13:40:54');
-/*!40000 ALTER TABLE `utilisateur` ENABLE KEYS */;
+LOCK TABLES `reservation` WRITE;
+/*!40000 ALTER TABLE `reservation` DISABLE KEYS */;
+INSERT INTO `reservation` VALUES (9,1,1,NULL),(11,1,4,NULL),(12,1,1,NULL),(13,1,3,NULL),(14,1,4,NULL),(15,1,4,NULL),(16,1,4,NULL),(17,1,4,NULL),(18,1,2,NULL);
+/*!40000 ALTER TABLE `reservation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-27  9:26:37
+-- Dump completed on 2024-11-27 21:19:28
