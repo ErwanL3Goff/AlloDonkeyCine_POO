@@ -22,7 +22,7 @@
                 color: white;
             }
         </style>
-        <h2 class="Bleach">AlloDokeyCine</h2>
+        <h2 class="Bleach">AlloDonkeyCine</h2>
         <nav>
             <a href="/index">Accueil</a>
 
