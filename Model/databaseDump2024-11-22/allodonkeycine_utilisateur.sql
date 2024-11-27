@@ -33,7 +33,7 @@ CREATE TABLE `utilisateur` (
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`,`email`,`surnom`),
   UNIQUE KEY `surnom_UNIQUE` (`surnom`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `utilisateur` (
 
 LOCK TABLES `utilisateur` WRITE;
 /*!40000 ALTER TABLE `utilisateur` DISABLE KEYS */;
-INSERT INTO `utilisateur` VALUES (1,'SU','Steven','stevensu@email.com','motdepasse','administrateur',NULL,NULL);
+INSERT INTO `utilisateur` VALUES (1,'SU','Steven','stevensu@email.com','motdepasse','administrateur',NULL,NULL),(5,'azer','azertyuiop','azerty@azerty.aze','azerty','razer','2020-01-01','2024-11-22 13:40:54');
 /*!40000 ALTER TABLE `utilisateur` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-22  9:54:58
+-- Dump completed on 2024-11-27  9:26:37

@@ -32,7 +32,7 @@ CREATE TABLE `reservation` (
   KEY `reversationSeance_idx` (`ID_seance`),
   CONSTRAINT `reservationIDuser` FOREIGN KEY (`ID_user`) REFERENCES `utilisateur` (`id`),
   CONSTRAINT `reversationSeance` FOREIGN KEY (`ID_seance`) REFERENCES `seance` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `reservation` (
 
 LOCK TABLES `reservation` WRITE;
 /*!40000 ALTER TABLE `reservation` DISABLE KEYS */;
+INSERT INTO `reservation` VALUES (1,1,1,NULL),(2,1,2,NULL);
 /*!40000 ALTER TABLE `reservation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-22  9:54:58
+-- Dump completed on 2024-11-27  9:26:37
