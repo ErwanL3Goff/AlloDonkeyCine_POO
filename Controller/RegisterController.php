@@ -13,7 +13,7 @@ class RegisterController
     {
         if (!empty($postUser))
             $newUser['firstName'] = htmlspecialchars($postUser['firstName']);
-        $newUser['lastName'] = htmlspecialchars($postUser['lastName']);
+        $newUser['lastname'] = htmlspecialchars($postUser['lastname']);
         $newUser['email'] = filter_var($postUser['email'], FILTER_SANITIZE_EMAIL);
         $newUser['password'] = $postUser['password'];
         return $newUser;
@@ -26,7 +26,7 @@ class RegisterController
         if ($_POST) {
             if ($this->checkForm($_POST)) {
                 $newUser = $this->userRepository->addUser([
-                    'nom' => $_POST['lastName'],
+                    'nom' => $_POST['lastname'],
                     'prenom' => $_POST['firstName'],
                     'surnom' => $_POST['nickname'],
                     'dateDeNaissance' => $_POST['dateOfBirth'],

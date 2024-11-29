@@ -20,7 +20,6 @@ class LoginController
             ]);
 
             if ($user) {
-
                 $_SESSION['user'] = $user;
                 Header('Location: /index');
             } else {

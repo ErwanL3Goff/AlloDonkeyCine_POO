@@ -14,7 +14,7 @@
                 </a>
                 <p class='film-description'>{$film['film_description']}</p>
                 <p class='film-duration'><strong>Durée:</strong> {$film['film_duree']}</p>
-                <p><button type='form' >Reserver</p>
+                
             </div>
         </div>";
         }
