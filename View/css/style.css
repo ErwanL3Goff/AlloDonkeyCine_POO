@@ -415,12 +415,12 @@ body {
 .Pablo{
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  height: 
 }
 
 .film-container2 {
@@ -438,8 +438,8 @@ body {
 
 /* Style de l'image du film */
 .film-image2 {
-  max-width: 100%;
-  height: auto;
+  max-width: 30%;
+  height: 12%;
   border-radius: 8px;
   margin-bottom: 20px;
   object-fit: cover;
