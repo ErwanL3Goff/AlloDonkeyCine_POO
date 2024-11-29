@@ -14,11 +14,11 @@
             </label>
             <input type="text" name="firstName" id="firstName" />
             <br />
-            <label for="nickname">
-                Pseudo
-            </label>
-            <input type="text" name="nickname" id="nickname" />
-            <br />
+<!--            <label for="nickname">-->
+<!--                Pseudo-->
+<!--            </label>-->
+<!--            <input type="text" name="nickname" id="nickname" />-->
+<!--            <br />-->
 
             <label for="email">
                 E-mail
@@ -34,14 +34,11 @@
         </div>
 
         <label for="dateOfBirth">
-            Mot de passe
+            Date de naissance
         </label>
         <input type="date" name="dateOfBirth" id="dateOfBirth" />
         <br />
 
         <br /><br />
         <input type="submit" value="Inscription" />
-    </form>
-    <br /><br />
-    <input type="submit" value="Inscription" />
     </form>

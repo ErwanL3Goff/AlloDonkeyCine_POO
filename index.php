@@ -4,7 +4,6 @@ require 'config/constant.php';
 require 'config/db.php';
 require 'config/repositories.php';
 require 'config/models.php';
-
 require 'config/controllers.php';
 require 'Router.php';
 
